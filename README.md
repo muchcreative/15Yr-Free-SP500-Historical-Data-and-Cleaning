@@ -14,7 +14,7 @@ I prefer a REST API such as IEX, Polygon, or Alpaca. They are very affordable, o
 
 ## Breakdown
 
-The "*allmodules"* folder has all functions that we will use in the tutorials for easier digestion and integration for your programs. Still, the functions are written out in the tutorials to avoid back-tracing to this folder.
+The "*allmodules"* folder has all functions that we will use in the tutorials for easier digestion and integration for your programs. Still, the tutorials have their own module folders to store all the functions that they use. This is to avoid back-tracing to this folder.
 
 **Part 1: Collect Past SP500 Constituents**
 
