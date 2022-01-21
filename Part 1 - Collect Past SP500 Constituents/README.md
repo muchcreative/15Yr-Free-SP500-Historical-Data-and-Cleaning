@@ -1,4 +1,4 @@
-## Part 1: Collect Past SP500 Constituents
+## Part 1 - Collect Past SP500 Constituents
 
 In order to get 15 Years of Historicals from the SP500 we first need to know which tickers we need to download historicals from. This means knowing the previous constituents that were in the SP500. This is all to construct a survivorship bias-less set of data.
 
