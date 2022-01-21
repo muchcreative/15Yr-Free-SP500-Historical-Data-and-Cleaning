@@ -1,4 +1,4 @@
-## Part 2: Download YF Historicals
+## Part 2 - Download YF Historicals
 
 Using the *"S&P500 Consitutents 20070101-20220116.json"* from Part 1, located in the *"p1outputs"* folder, we will download the YF historicals for the past 15 years. For now we will download the full 15 year history of all tickers in the consituents json file. In Part 3 we will then complete an EDA on the data and decide how to filter and deal with the missing information.
 
