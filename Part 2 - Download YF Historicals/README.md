@@ -1,3 +1,7 @@
 ## Part 2: Download YF Historicals
 
-Using the "" from Part 1, now located in the *"p1data"* folder, we will download the YF historicals for the past 15 years. For now we will download the full 15 year history and then we will filter, decide what to do with missing information, and EDA the data in Part 3.
+Using the *"S&P500 Consitutents 20070101-20220116.json"* from Part 1, located in the *"p1outputs"* folder, we will download the YF historicals for the past 15 years. For now we will download the full 15 year history of all tickers in the consituents json file. In Part 3 we will then complete an EDA on the data and decide how to filter and deal with the missing information.
+
+In the *"Part 2 Tutorial.ipynb"* there is the option of saving the historicals as CSV files or HDF5 files. You may also save them as pickle files if you are coding in Python, but I consider pickles to be more for a temporary storage and would be a bad choice if you continutally plan to write to your historicals files as to update them overtime. I currently have all my data saved as HDF5 files in order to group together any feature engineering or labels I create for machine learning in the same file and easier readability. 
+
+The Yahoo Finance historicals will be saved in the *"p2outputs"* folder. I only included the first 18 ticker historicals in the folder for obvious reasons. Additionally, there is a *"logs"* folder which contains all the tickers that could be downloaded from Yahoo Finance at the time of writing this and all those that were unavaliable off of Yahoo Finance. This folder will be created as you move through the tutorial notebook. Again, this missing tickers problem will be analyzed with solutions in Part 3.
