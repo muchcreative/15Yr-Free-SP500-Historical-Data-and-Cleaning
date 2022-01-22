@@ -1,8 +1,6 @@
 ## Introduction
 
-How to download free Yahoo Finance Data from the SP500 for the past 15 years and clean it into an HDF5 or CSV format.
-
-The intended purpose of this dataset is to use this to trade and select stocks on the SP500 as it changes through the years and create a strategy that can select good stocks to buy on the SP500 at any point in history. The dataset can be used with a backtester to test out a strategy or used to train a machine learning program. Its main focus will be trading the SP500.
+The intended purpose of this dataset is to use this to trade and select stocks on the SP500 as it changes through the years and create a strategy that can select good stocks to buy on the SP500 at any point in history. The dataset can be used with a backtester to test out a strategy or used to train a machine learning program. Its main focus will be trading the SP500. It is not your normal database, you will need to adjust your backtester to accomadate
 
 Let me know if you have any questions. As you go through the tutorials you will find some data is missing, it will be on you to find that data.
 
