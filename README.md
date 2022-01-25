@@ -4,7 +4,7 @@ The intended purpose of this dataset to trade and select stocks on the SP500 as 
 
 The dataset can be used with a backtester to test out a strategy or used to train a machine learning program. Its main focus will be trading the SP500. If you later plan on using a paid for service that utlizes a REST API, I have uploaded IEX Cloud API functions in the Part 3B Tutorial for reference.
 
-Let me know if you have any questions
+You will need to incorporate your own data pipeline to check the quality of the historicals once you downloaded them yourself.
 
 Thanks to fja05680 for the SP500 constituents changes list located here https://github.com/fja05680/sp500 and the free yf-finance module released here https://github.com/ranaroussi/yfinance by Ran Aroussi.
 
