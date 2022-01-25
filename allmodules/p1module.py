@@ -1,11 +1,15 @@
 import pandas as pd
 import datetime as dt
-import os
+
+from pathlib import Path
+import json
 
 def get_sp500_constitutents_records(filepath):
-    if os.path.isfile(filepath):
-        df = pd.read_csv(filepath, index_col='date')
-        return df
+    sp500_constituents_file = Path(filepath)
+    if sp500_constituents_file.is_file():
+      df = pd.read_csv(filepath, index_col='date')
+    else:
+      return print('Could not find SP500 Constituents Records')
 
 def format_sp500_constituents_records(df):
   df['tickers'] = df['tickers'].apply(lambda x: sorted(x.split(','))) #Change each ticker row to lists
