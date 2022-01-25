@@ -111,6 +111,35 @@ def _remove_tickers_with_no_missing_dates_while_in_sp500(true_missing_tickers_an
                                     if not missing_dates.empty}
   return true_missing_tickers_and_dates
 
+def find_all_missing_dates_when_not_in_sp500(missing_tickers,
+                                            full_date_range,
+                                            sp500_changes):
+  true_missing_tickers_and_dates = dict()
+  full_date_range = full_date_range.to_series().rename() #Remove name and change to series for loc function
+  for ticker in missing_tickers:
+    mask = [True if ticker in current_sp500_tickers
+            else False
+            for current_sp500_tickers in sp500_changes['tickers'].values]
+    
+    dates_mask = sp500_changes['date'].where(mask, False)
+    times_in_sp500 = _get_all_times_in_sp500(dates_mask)
+
+    #Compare when it was in the sp500 to what data is missing from your historicals
+    true_missing_tickers_and_dates[ticker] = _get_missing_dates_with_full_range(full_date_range,
+                                                                               times_in_sp500)
+  true_missing_tickers_and_dates = _remove_tickers_with_no_missing_dates_while_in_sp500(true_missing_tickers_and_dates)
+  return true_missing_tickers_and_dates
+
+def _get_missing_dates_with_full_range(full_date_range,
+                                      times_in_sp500):
+  ticker_true_missing_dates = None
+  for time in times_in_sp500:
+    if ticker_true_missing_dates is None:
+      ticker_true_missing_dates = full_date_range.loc[time[0]:time[1]]
+    else:
+      ticker_true_missing_dates = pd.concat([ticker_true_missing_dates, full_date_range.loc[time[0]:time[1]]])
+  return ticker_true_missing_dates
+
 def get_missing_occurances(true_missing_tickers_and_dates):
   all_dates = None
   for missing_dates in true_missing_tickers_and_dates.values():
