@@ -4,7 +4,7 @@ The intended purpose of this dataset to trade and select stocks on the SP500 as 
 
 The dataset can be used with a backtester to test out a strategy or used to train a machine learning program. Its main focus will be trading the SP500. If you later plan on using a paid for service that utlizes a REST API, I have uploaded IEX Cloud API functions in the Part 3B Tutorial for reference.
 
-You will need to incorporate your own data pipeline to check the quality of the historicals once you downloaded them yourself. Additioanlly, the majority of tickers can be download off of YF and even a paid service. However, for tickers dating back to 2007-2010, you will need to manually research changes in ticker names as they can often be considerd invalid when you request for them. For example, m&a or bankrupticies of a company tend to get deleted from a database.
+You will need to incorporate your own data pipeline to check the quality of the historicals once you downloaded them yourself. Additioanlly, the majority of tickers can be download off of YF and even a paid service. However, for tickers dating back to 2007-2010, you will need to manually research changes in ticker names as they can often be considerd invalid when you request for them. For example, m&a or bankrupticies of a company tend to get deleted or renamed on an online database.
 
 Thanks to fja05680 for the SP500 constituents changes list located here https://github.com/fja05680/sp500 and the free yf-finance module released here https://github.com/ranaroussi/yfinance by Ran Aroussi.
 
