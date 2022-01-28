@@ -6,7 +6,7 @@ import h5py
 from pathlib import Path
 import json
 
-def download_yf_tickers(tickers, period='15y'): #You can take more than 15yrs here or specifiy a start_date and end_date
+def download_yf_tickers(tickers, period='15y'): #You can take more than 15yrs here or specifiy a start date and end date, see yf-module
   historicals = dict()
   tickers_avaliable_on_yf = []
   tickers_not_avaliable_on_yf = []
