@@ -84,7 +84,7 @@ def save_historicals_to_hdf5(historicals, filepath):
       history = f.create_group('historicals')
       history.create_dataset(name='15Y',
                              data=historicals[ticker],
-                             maxshape=(None, 5), #Need to specify maxshape here to make extendible hdf5 files 
+                             maxshape=(None, 6), #Need to specify maxshape here to make extendible hdf5 files 
                              compression='gzip')
     print('Saved {} as HDF5'.format(ticker))
 
