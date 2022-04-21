@@ -1,2 +1,2 @@
 # Refer to https://note.nkmk.me/en/python-pip-install-requirements/
-yahoo finance
+yfinance
