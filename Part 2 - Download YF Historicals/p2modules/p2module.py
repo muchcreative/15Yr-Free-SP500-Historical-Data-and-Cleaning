@@ -1,5 +1,11 @@
 '''Part 2 Tutorial Modules.
 
+Module used for the GitHub repository "Part 2 - Download YF Historicals."
+This module contains the functions required to download and format the historical data
+from yahoo finance. The two types of saved file formats supported by this module are
+csv and hdf5. Historicals that were not avaliable from Yahoo Finance can be logged and
+saved as a json file; see 'log_availability_of_tickers_to_json(tickers, filepath, status)."
+
 Functions:
   download_yf_tickers(tickers, start_date='2007-01-22', end_date='2022-01-19')
     Downloads specified ticker data from Yahoo Finance.
