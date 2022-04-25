@@ -1,5 +1,8 @@
 '''Part 3A Tutorial Modules.
 
+Module used for the GitHub repository "Part 3 - Handling Missing YF Historicals."
+Part 3A's functions focus on EDA analysis for missing Yahoo Finance historicals.
+
 Functions:
   load_hdf5_historicals(tickers, filepath)
     Load hdf5 historicals to memory.
