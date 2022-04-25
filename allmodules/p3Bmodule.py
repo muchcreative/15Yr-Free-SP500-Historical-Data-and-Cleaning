@@ -1,5 +1,12 @@
 '''Part 3B Tutorial Modules.
 
+Module used for the GitHub repository "Part 3 - Handling Missing YF Historicals."
+Part 3B module contains functions to download IEX Cloud historicals. It creates
+batch urls to request data from IEX Cloud and collects the missing historicals
+that were not avaliable on IEX Cloud when requested. In addition, this module
+can compare the new IEX Cloud data with the data that is currently downloaded in
+the Yahoo Finance database and its missing data. 
+
 Functions:
   generate_iex_historical_batch_urls(tickers, date_length, partition_size=50, IEX_TOKEN=IEX_TOKEN)
     Generates historical batch urls for IEX Cloud.
