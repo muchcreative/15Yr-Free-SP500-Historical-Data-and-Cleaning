@@ -1,5 +1,9 @@
 '''Part 1 Tutorial Modules.
 
+Module used for the GitHub repository "Part 1 - Collect Past SP500 Constituents."
+This module contains the functions required to aggregate all the previous sp500 constituents
+up until the present year.
+
 Functions:
   get_sp500_constituents_records(filepath)
     Gets SP500 constituents records from the specified filepath.
